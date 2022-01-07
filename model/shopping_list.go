@@ -2,6 +2,8 @@ package model
 
 import "gorm.io/gorm"
 
+//ShoppingList is used for the Purchasing
+
 type ShoppingList struct {
 	gorm.Model
 	Title string `gorm:"not null"`

@@ -7,6 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
+//
 type UserWrapper struct {
 	DB *gorm.DB
 }
