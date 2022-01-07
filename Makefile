@@ -15,7 +15,7 @@ lint:
 	$(GOLINT) -set_exit_status ./...
 
 ## build: Gathers the dependencies and builds the binary
-build:
+build:lint
 	$(GOMOD) tidy
 	$(GOBUILD) -o $(BINARY_NAME) -v
 

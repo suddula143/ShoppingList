@@ -15,6 +15,7 @@ import (
 // SignupController is a controller handling user sign-ins
 type SignupController struct{}
 
+//AddUser is used to add user informations
 func (s *SignupController) AddUser(context *gin.Context) {
 	//take the input
 	inputUser := struct {
