@@ -2,6 +2,7 @@ package routes
 
 import "github.com/gin-gonic/gin"
 
+//UserGroup is used to signup,login.logout for eachuser
 func UserGroup(r *gin.Engine) {
 	userGroup := r.Group("/user")
 	{
