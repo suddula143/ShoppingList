@@ -12,6 +12,7 @@ var (
 	shoppingListController = new(controller.ShoppingListController)
 )
 
+//InitRoutes create the routes for shoppinglist
 func InitRoutes(r *gin.Engine) {
 	UserGroup(r)
 	ShoppingListGroup(r)

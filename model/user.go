@@ -4,7 +4,7 @@ import (
 	"gorm.io/gorm"
 )
 
-//User gives details like name,email,password,ShoppingList
+//User gives details like Name,Email,Password,ShoppingList
 type User struct {
 	gorm.Model
 	UserID        string         `gorm:"type:varchar(30);not null"`
