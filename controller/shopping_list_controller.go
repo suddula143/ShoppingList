@@ -9,10 +9,8 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-//ShoppingListController gives authorize session token to users
 type ShoppingListController struct{}
 
-//AddShoppingList adds the shopping list to user
 func (s *ShoppingListController) AddShoppingList(context *gin.Context) {
 	status, resp := cache.AuthorizeSessionToken(context)
 	if status != http.StatusOK {

@@ -2,7 +2,7 @@ package model
 
 import "gorm.io/gorm"
 
-//Category is to catagories the items and give their description
+//Category gives the Models
 type Category struct {
 	gorm.Model
 	Name        string `gorm:"not null"`
