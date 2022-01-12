@@ -2,7 +2,7 @@ package model
 
 import "gorm.io/gorm"
 
-// Item in the shopping list gives the names of items in the list
+//Item is used to show  in ShoppingList
 type Item struct {
 	gorm.Model
 	Name           string `gorm:"not null"`

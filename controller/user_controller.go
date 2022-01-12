@@ -9,10 +9,8 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-//UserController fetches the shopping list to user
 type UserController struct{}
 
-//FetchShoppingLists fetches shoppinglists according to session token
 func (u *UserController) FetchShoppingLists(context *gin.Context) {
 	status, resp := cache.AuthorizeSessionToken(context)
 	if status != http.StatusOK {
