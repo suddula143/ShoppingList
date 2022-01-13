@@ -1,5 +1,5 @@
 [webserver]
-port = 9595
+port = 8888
 
 [logging]
 level = 5 #Debug
@@ -10,8 +10,8 @@ password = "hari@1234"
 dbname = "shopinglist"
 ip = "localhost"
 port = 3306
-max_connection_attempt = 10
+max_connection_attempt = 60
 
 [kv]
-ip = "redis"
-#ip = "127.0.0.1:9675"
+#ip = "redis"
+ip = "127.0.0.1:9675"
