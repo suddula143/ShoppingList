@@ -7,21 +7,26 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      - MYSQL_ROOT_PASSWORD=CC123
+      - MYSQL_ROOT_PASSWORD=hari@1234
       - MYSQL_DATABASE=shoppinglist
     volumes:
       - my-datavolume:/var/lib/mysql
+  passwrdSVC:
+     image: password:0.01
+     build: .
+     ports:
+      - "9797:9797"
  
   shoppinglist:
     build: .
     ports:
       - "9595:9595"
     depends_on:
-      - "redis"
-      - "mysql"
+      - "password:0.01"
+       
     links:
-      - mysql:mysql
-      - redis:redis
+      - password:password
+      
 
 volumes:
   my-datavolume:
